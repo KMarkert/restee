@@ -1,6 +1,7 @@
 import ee
 import json
 import geojson
+import requests
 import geopandas as gpd
 
 from .common import _send_request
