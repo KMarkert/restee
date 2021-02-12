@@ -10,3 +10,6 @@ Python package to call process EE objects via the REST API to local data
  * geopandas
  * geojson
  * earthengine-api
+ 
+ To install run the following command:
+ ` pip install git+https://github.com/kmarkert/restee.git`
