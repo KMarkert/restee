@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(name='restee',
       version='0.0.1',
-      description='Python package to call process EE objects via the REST API to local data',
+      description='Python package to call processed EE objects via the REST API to local data',
       long_description=long_description,
       long_description_content_type="text/markdown",
       url='http://github.com/kmarkert/restee',
