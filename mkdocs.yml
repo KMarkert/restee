@@ -1,0 +1,21 @@
+site_name: restee Documentation
+
+nav:
+  - Overview: index.md
+  - Installation: installation.md
+  - Usage: usage.md
+  - API Reference: 
+    - core module: core.md
+    - images module: images.md
+    - tables module: tables.md
+    - values module: values.md
+
+theme: 
+    name: material
+
+# markdown_extensions:
+#     - markdown.extensions.codehilite:
+#         guess_lang: false
+plugins:
+    - search
+    - mkdocstrings
