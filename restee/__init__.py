@@ -3,4 +3,4 @@ from restee.images import *
 from restee.values import *
 from restee.tables import *
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
