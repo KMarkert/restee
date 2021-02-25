@@ -1,12 +1,12 @@
 # Welcome to the restee documentation
 
-`restee` is a package that aims to make plugging Earth Engine (EE) computations into downstream Python processing easier. The EE REST API allows user to interface with EE using REST API calls that allow for . There are many more features to the EE REST API, however, `restee` aims to simply provide a user-friendly means to access computed server-side objects (like image data) from the [Python `earthengine-api`](https://developers.google.com/earth-engine/guides/python_install) API to a local Python enviroment (client-side).
+`restee` is a package that aims to make plugging Earth Engine (EE) computations into downstream Python processing easier. The EE REST API allows user to interface with EE using REST API calls which allows for more flexibility in working with EE, however, without detailed knowleged of the API use it can be somewhat cryptic. `restee` aims to provide a user-friendly means to access computed server-side objects (like image data) from the [`earthengine-api`](https://developers.google.com/earth-engine/guides/python_install) API to a local Python enviroment (client-side).
 
 It should be noted that `restee` relies on fairly new and advanced EE features that may not be suitable for all users (see [warning from the EE team](https://developers.google.com/earth-engine/reference#audience)). If you are new to Earth Engine, please get started with the [JavaScript guide](https://developers.google.com/earth-engine/getstarted).
 
 ## Getting Started
 
-This section is meant purely as a demonstration of what is possible, please see the [Installation page](/installation) for how to install package and setup the authentication then the [Usage page](/usage) for in depth information.
+This section is meant purely as a demonstration of what is possible, please see the [Installation page](/restee/installation) for how to install package and setup the authentication then the [Usage page](/restee/usage) for in depth information.
 
 In this case, we will compute a median NDVI composite for the Summer months over Central America using MODIS. Then we will request the data locally as a xarray.Dataset object so we can then use for local processing.
 
@@ -61,7 +61,7 @@ ndvi_ds.NDVI.plot(robust=True,cmap="viridis")
 
 ![MODIS Summer NDVI](img/modis_ndvi_example.png)
 
-Again, this quick example was to highlight how a user may define an EE computation using the `earthengine-api` and request the data into a local data structure. One may use `restee` to get zonal statitics calculated for feature collections or even explore collection metadata, any format on EE can be requested locally. For more details, please see the [Usage page](/usage).
+Again, this quick example was to highlight how a user may define an EE computation using the `earthengine-api` and request the data into a local data structure. One may use `restee` to get zonal statitics calculated for feature collections or even explore collection metadata, any format on EE can be requested locally. For more details, please see the [Usage page](/restee/usage).
 
 ## Get in touch
 

@@ -1,6 +1,6 @@
 # Using restee
 
-The page serves as more in depth examples of using `restee` to get data from Earth Engine results. Before walking through these examples, please make sure you have gone throught the [Installation page](/installation) and installed everything correctly.
+The page serves as more in depth examples of using `restee` to get data from Earth Engine results. Before walking through these examples, please make sure you have gone throught the [Installation page](/restee/installation) and installed everything correctly.
 
 To begin, we will need to import the `ee` and `restee` packages. Next, we need to authenticate Earth Engine and create a authenticated cloud session so we can request the data from the server to our local system.
 
@@ -103,7 +103,7 @@ gdf.plot(column="NDVI",cmap="Greens")
 
 ![SE Asia NDVI](img/table_example.png)
 
-Not all computed ee.Feature or ee.FeatureCollections have geometry information, to support the lack of geometry data, `restee` also has a function [`restee.features_to_df`](/tables/#restee.features_to_df) to request the data as a `pandas.DataFrame`.
+Not all computed ee.Feature or ee.FeatureCollections have geometry information, to support the lack of geometry data, `restee` also has a function [`restee.features_to_df`](/restee/tables/#restee.features_to_df) to request the data as a `pandas.DataFrame`.
 
 ## Requesting Values
 
