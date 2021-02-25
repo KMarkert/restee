@@ -2,6 +2,11 @@
 
 Python package to call process EE objects via the REST API to local data
 
+[![PyPI version](https://badge.fury.io/py/restee.svg)](https://badge.fury.io/py/restee)
+[![docs](https://github.com/KMarkert/restee/actions/workflows/docs.yml/badge.svg)](https://github.com/KMarkert/restee/actions/workflows/docs.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+
 `restee` is a package that aims to make plugging Earth Engine (EE) computations into downstream Python processing easier. The EE REST API allows user to interface with EE using REST API calls that allow for . There are many more features to the EE REST API, however, `restee` aims to simply provide a user-friendly means to access computed server-side objects (like image data) from the [Python `earthengine-api`](https://developers.google.com/earth-engine/guides/python_install) API to a local Python enviroment (client-side).
 
 It should be noted that `restee` relies on fairly new and advanced EE features that may not be suitable for all users (see [warning from the EE team](https://developers.google.com/earth-engine/reference#audience)). If you are new to Earth Engine, please get started with the [JavaScript guide](https://developers.google.com/earth-engine/getstarted).
@@ -71,16 +76,14 @@ ndvi_ds = ree.img_to_xarray(session,domain,modis,no_data_value=0)
 # inspect the local xarray Dataset object
 ndvi_ds
 
-#output
-'''
-<xarray.Dataset>
-Dimensions:  (lat: 1130, lon: 1509)
-Coordinates:
-  * lon      (lon) float64 -92.23 -92.22 -92.21 -92.2 ... -77.17 -77.16 -77.15
-  * lat      (lat) float64 18.48 18.47 18.46 18.45 ... 7.225 7.215 7.205 7.195
-Data variables:
-    NDVI     (lat, lon) float32 nan nan nan nan nan nan ... nan nan nan nan nan
-'''
+# output
+# <xarray.Dataset>
+# Dimensions:  (lat: 1130, lon: 1509)
+# Coordinates:
+#   * lon      (lon) float64 -92.23 -92.22 -92.21 -92.2 ... -77.17 -77.16 -77.15
+#   * lat      (lat) float64 18.48 18.47 18.46 18.45 ... 7.225 7.215 7.205 7.195
+# Data variables:
+#     NDVI     (lat, lon) float32 nan nan nan nan nan nan ... nan nan nan nan nan
 ```
 
 From this point on the computed data is local to your system so you can do with it what you want. This allows the data to be plotted, persisted, or fed into another downstream process. For the sake of example, here we will plot the result.
