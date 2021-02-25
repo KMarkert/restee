@@ -30,7 +30,7 @@ domain = ree.Domain.from_ee_geometry(session, maine, resolution=0.005)
 imshow(domain.mask)
 ```
 
-![Maine domain](/img/domain_example.png)
+![Maine domain](img/domain_example.png)
 
 Now that we have a domain we can use that to control where on the globe we request imagery. Here we simply grab the first image in the MOD13Q1 NDVI collection and request the data for Maine.
 
@@ -85,6 +85,8 @@ It is planned to allow users to define an ImageCollection by other properties th
 ## Requesting Tables
 
 Imagery is not the only thing that Earth Engine can process. There are many vector based workflows that are useful on Earth Engine such as sampling values from an image or calculating zonal statistics. To access computed a computed feature or feature collection, `restee` has methods to request the data in a local table structure.
+
+In this example, we will calculate the average NDVI from a MODIS image for the countries in Southeast Asia:
 
 ```python
 countries = ee.FeatureCollection("USDOS/LSIB_SIMPLE/2017")
