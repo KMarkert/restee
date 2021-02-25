@@ -1,4 +1,6 @@
-from .common import *
-from .images import *
-from .values import *
-from .tables import *
+from restee.core import *
+from restee.images import *
+from restee.values import *
+from restee.tables import *
+
+__version__ = "0.0.1"
