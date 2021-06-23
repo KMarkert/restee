@@ -51,7 +51,7 @@ class Domain:
             self.bbox = bbox
 
         minx, miny, maxx, maxy = self.bbox
-        y_coords = np.arange(miny, maxy, self.resolution)[::-1]
+        y_coords = np.arange(miny+self.resolution, maxy+self.resolution, self.resolution)[::-1]
         x_coords = np.arange(minx, maxx, self.resolution)
 
         self.x_size = x_coords.size
@@ -294,7 +294,7 @@ class EESession:
         if the initial ones fail.
 
         args:
-            url (str): EE REST API endpoint to send request. 
+            url (str): EE REST API endpoint to send request.
                 See https://developers.google.com/earth-engine/reference/rest for more info
             data (dict): Dictionary object to send in the body of the Request.
 
