@@ -1,0 +1,1469 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>core module - restee Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#restee.core" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="restee Documentation" class="md-header__button md-logo" aria-label="restee Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            restee Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              core module
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="restee Documentation" class="md-nav__button md-logo" aria-label="restee Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    restee Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation.html" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="usage.html" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        API Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          core module
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="core.html" class="md-nav__link md-nav__link--active">
+        core module
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#restee.core" class="md-nav__link">
+    core
+  </a>
+  
+    <nav class="md-nav" aria-label="core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain" class="md-nav__link">
+    Domain
+  </a>
+  
+    <nav class="md-nav" aria-label="Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain.pixelgrid" class="md-nav__link">
+    pixelgrid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain.from_ee_geometry" class="md-nav__link">
+    from_ee_geometry()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain.from_geopandas" class="md-nav__link">
+    from_geopandas()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain.from_rasterio" class="md-nav__link">
+    from_rasterio()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain.resample" class="md-nav__link">
+    resample()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain.to_ee_bbox" class="md-nav__link">
+    to_ee_bbox()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.EESession" class="md-nav__link">
+    EESession
+  </a>
+  
+    <nav class="md-nav" aria-label="EESession">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.EESession.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.EESession.send_request" class="md-nav__link">
+    send_request()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="images.html" class="md-nav__link">
+        images module
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tables.html" class="md-nav__link">
+        tables module
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="values.html" class="md-nav__link">
+        values module
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#restee.core" class="md-nav__link">
+    core
+  </a>
+  
+    <nav class="md-nav" aria-label="core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain" class="md-nav__link">
+    Domain
+  </a>
+  
+    <nav class="md-nav" aria-label="Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain.pixelgrid" class="md-nav__link">
+    pixelgrid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain.from_ee_geometry" class="md-nav__link">
+    from_ee_geometry()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain.from_geopandas" class="md-nav__link">
+    from_geopandas()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain.from_rasterio" class="md-nav__link">
+    from_rasterio()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain.resample" class="md-nav__link">
+    resample()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.Domain.to_ee_bbox" class="md-nav__link">
+    to_ee_bbox()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.EESession" class="md-nav__link">
+    EESession
+  </a>
+  
+    <nav class="md-nav" aria-label="EESession">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.EESession.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restee.core.EESession.send_request" class="md-nav__link">
+    send_request()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>core module</h1>
+                
+                <div class="doc doc-object doc-module">
+
+
+
+<h2 class="doc doc-heading" id="restee.core">
+        <code>restee.core</code>
+
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 class="doc doc-heading" id="restee.core.Domain">
+        <code>Domain</code>
+
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Domain class to define spatial region for image requests</p>
+
+<p><strong>Examples:</strong></p>
+    <p>Defines a psuedo-global domain at 1 degree resolution</p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">coords</span> <span class="o">=</span>  <span class="p">[</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span><span class="mi">180</span><span class="p">,</span><span class="mi">85</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">domain</span> <span class="o">=</span> <span class="n">restee</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span><span class="n">resolution</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">domain</span><span class="o">.</span><span class="n">shape</span>
+    <span class="p">(</span><span class="mi">145</span><span class="p">,</span> <span class="mi">360</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 class="doc doc-heading" id="restee.core.Domain.pixelgrid">
+<code class="highlight language-python"><span class="n">pixelgrid</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Property for json/dict represenstion of pixel grid info for requesting EE rasters.
+Used to define the spatial domain and shape of imagery for requests</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>dict</code></td>
+      <td><p>dictionary representation of pixel grid (https://developers.google.com/earth-engine/reference/rest/v1beta/PixelGrid)</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 class="doc doc-heading" id="restee.core.Domain.__init__">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bbox</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;EPSG:4326&#39;</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Initialize Domain class</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>bbox</code></td>
+        <td><code>Iterable</code></td>
+        <td><p>bounding box to create domain as [W,S,E,N]</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>resolution</code></td>
+        <td><code>float</code></td>
+        <td><p>resolution to make domain. default = 0.25</p></td>
+        <td><code>0.25</code></td>
+      </tr>
+      <tr>
+        <td><code>crs</code></td>
+        <td><code>str</code></td>
+        <td><p>string name of coordinate reference system of domain.
+resolution units must match the crs units. default = "EPSG:4326"</p></td>
+        <td><code>&#39;EPSG:4326&#39;</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>restee/core.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">bbox</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">resolution</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">,</span> <span class="n">crs</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;EPSG:4326&quot;</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Initialize Domain class</span>
+
+<span class="sd">    args:</span>
+<span class="sd">        bbox (Iterable): bounding box to create domain as [W,S,E,N]</span>
+<span class="sd">        resolution (float): resolution to make domain. default = 0.25</span>
+<span class="sd">        crs (str): string name of coordinate reference system of domain.</span>
+<span class="sd">            resolution units must match the crs units. default = &quot;EPSG:4326&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># set crs</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_crs</span> <span class="o">=</span> <span class="n">crs</span>
+
+    <span class="c1"># set resolution info</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">resolution</span> <span class="o">=</span> <span class="n">resolution</span>
+
+    <span class="c1"># set the bounding box</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">bbox</span><span class="p">)</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolution</span><span class="p">))</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span> <span class="o">=</span> <span class="n">Domain</span><span class="o">.</span><span class="n">_round_out</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolution</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span> <span class="o">=</span> <span class="n">bbox</span>
+
+    <span class="n">minx</span><span class="p">,</span> <span class="n">miny</span><span class="p">,</span> <span class="n">maxx</span><span class="p">,</span> <span class="n">maxy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span>
+    <span class="n">y_coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">miny</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">resolution</span><span class="p">,</span> <span class="n">maxy</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">resolution</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolution</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">x_coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">minx</span><span class="p">,</span> <span class="n">maxx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolution</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">x_size</span> <span class="o">=</span> <span class="n">x_coords</span><span class="o">.</span><span class="n">size</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">y_size</span> <span class="o">=</span> <span class="n">y_coords</span><span class="o">.</span><span class="n">size</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">x_coords</span> <span class="o">=</span> <span class="n">x_coords</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">y_coords</span> <span class="o">=</span> <span class="n">y_coords</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">_construct_grid</span><span class="p">()</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+    <span class="k">return</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 class="doc doc-heading" id="restee.core.Domain.from_ee_geometry">
+<code class="highlight language-python"><span class="n">from_ee_geometry</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">geom</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Domain contructor function that takes a ee.Geometry, ee.Feature, or ee.FeatureCollection
+and returns a domain object with the geometry as a mask. Useful for using ee to process
+a region and use as domain for requsting imagery.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>session</code></td>
+        <td><code>EESession</code></td>
+        <td><p>restee session autheticated to make requests</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>geom</code></td>
+        <td><code>ee.Geometry|ee.Feature|ee.FeatureCollection</code></td>
+        <td><p>ee object to create the domain from</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>resolution</code></td>
+        <td><code>float</code></td>
+        <td><p>resolution to make domain, must match units of vector crs.
+default = 0.25</p></td>
+        <td><code>0.25</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>restee.Domain</code></td>
+      <td><p>domain object with mask from vector</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>restee/core.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">from_ee_geometry</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">geom</span><span class="p">,</span> <span class="n">resolution</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Domain contructor function that takes a ee.Geometry, ee.Feature, or ee.FeatureCollection</span>
+<span class="sd">    and returns a domain object with the geometry as a mask. Useful for using ee to process</span>
+<span class="sd">    a region and use as domain for requsting imagery.</span>
+
+<span class="sd">    args:</span>
+<span class="sd">        session (EESession): restee session autheticated to make requests</span>
+<span class="sd">        geom (ee.Geometry|ee.Feature|ee.FeatureCollection): ee object to create the domain from</span>
+<span class="sd">        resolution (float): resolution to make domain, must match units of vector crs.</span>
+<span class="sd">            default = 0.25</span>
+
+<span class="sd">    returns:</span>
+<span class="sd">        restee.Domain: domain object with mask from vector</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">geom</span><span class="p">,</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="p">):</span>
+        <span class="n">fc</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">FeatureCollection</span><span class="p">([</span><span class="n">ee</span><span class="o">.</span><span class="n">Feature</span><span class="p">(</span><span class="n">geom</span><span class="p">)])</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">geom</span><span class="p">,</span> <span class="n">ee</span><span class="o">.</span><span class="n">Feature</span><span class="p">):</span>
+        <span class="n">fc</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">FeatureCollection</span><span class="p">([</span><span class="n">geom</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">fc</span> <span class="o">=</span> <span class="n">geom</span>
+
+    <span class="n">project</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">cloud_project</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://earthengine.googleapis.com/v1beta/projects/</span><span class="si">{</span><span class="n">project</span><span class="si">}</span><span class="s2">/table:computeFeatures&quot;</span>
+    <span class="n">serialized</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">serializer</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">fc</span><span class="p">,</span> <span class="n">for_cloud_api</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">expression</span><span class="o">=</span><span class="n">serialized</span><span class="p">)</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">send_request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">payload</span><span class="p">)</span>
+
+    <span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">StringIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">()))</span>
+
+    <span class="k">return</span> <span class="n">Domain</span><span class="o">.</span><span class="n">from_geopandas</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="n">resolution</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 class="doc doc-heading" id="restee.core.Domain.from_geopandas">
+<code class="highlight language-python"><span class="n">from_geopandas</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Domain constructor function that takes a GeoDataFrame and returns a domain
+object with the vector as a mask.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>gdf</code></td>
+        <td><code>geopandas.GeoDataFrame</code></td>
+        <td><p>GeoDataFrame to create the domain from</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>resolution</code></td>
+        <td><code>float</code></td>
+        <td><p>resolution to make domain, must match units of vector crs.
+default = 0.25</p></td>
+        <td><code>0.25</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>restee.Domain</code></td>
+      <td><p>domain object with mask from vector</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>restee/core.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">from_geopandas</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">resolution</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Domain constructor function that takes a GeoDataFrame and returns a domain</span>
+<span class="sd">    object with the vector as a mask.</span>
+
+<span class="sd">    args:</span>
+<span class="sd">        gdf (geopandas.GeoDataFrame): GeoDataFrame to create the domain from</span>
+<span class="sd">        resolution (float): resolution to make domain, must match units of vector crs.</span>
+<span class="sd">            default = 0.25</span>
+
+<span class="sd">    returns:</span>
+<span class="sd">        restee.Domain: domain object with mask from vector</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bbox</span> <span class="o">=</span> <span class="n">Domain</span><span class="o">.</span><span class="n">_round_out</span><span class="p">(</span><span class="n">gdf</span><span class="o">.</span><span class="n">total_bounds</span><span class="p">,</span> <span class="n">res</span><span class="o">=</span><span class="n">resolution</span><span class="p">)</span>
+    <span class="n">crs</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">srs</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">Domain</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">resolution</span><span class="p">,</span> <span class="n">crs</span><span class="p">)</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">mask</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">geometry_mask</span><span class="p">(</span>
+        <span class="n">gdf</span><span class="o">.</span><span class="n">geometry</span><span class="p">,</span> <span class="n">d</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span> <span class="n">all_touched</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">invert</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">d</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 class="doc doc-heading" id="restee.core.Domain.from_rasterio">
+<code class="highlight language-python"><span class="n">from_rasterio</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">mask_val</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Domain contructor function that takes a rasterio object and returns a domain
+with the same geotransform and crs</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>ds</code></td>
+        <td><code>rasterio</code></td>
+        <td><p>rasterio object to model domain from</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>restee.Domain</code></td>
+      <td><p>domain object with same geotransform and crs as the input</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>restee/core.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">from_rasterio</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">mask_val</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Domain contructor function that takes a rasterio object and returns a domain</span>
+<span class="sd">    with the same geotransform and crs</span>
+
+<span class="sd">    args:</span>
+<span class="sd">        ds (rasterio): rasterio object to model domain from</span>
+
+<span class="sd">    returns:</span>
+<span class="sd">        restee.Domain: domain object with same geotransform and crs as the input</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">resolution</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">res</span><span class="p">)</span>
+    <span class="n">crs</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;init&quot;</span><span class="p">]</span>
+    <span class="n">bbox</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">Domain</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">resolution</span><span class="p">,</span> <span class="n">crs</span><span class="p">)</span>
+    <span class="c1"># TODO: add code to automatically mask no data values</span>
+    <span class="k">return</span> <span class="n">d</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 class="doc doc-heading" id="restee.core.Domain.resample">
+<code class="highlight language-python"><span class="n">resample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factor</span><span class="p">)</span></code>
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Function to resample domain shape and coordinates to a new resolution.
+Useful for requesting imagery over the same domain but at different spatial
+resolutions</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>factor</code></td>
+        <td><code>float</code></td>
+        <td><p>factor to scale the shape and coordinates. For example,
+if factor = 2, then the resolution will half and shape doubles.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>restee.Domain</code></td>
+      <td><p>domain object with new resolution/coordinates</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>restee/core.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factor</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Function to resample domain shape and coordinates to a new resolution.</span>
+<span class="sd">    Useful for requesting imagery over the same domain but at different spatial</span>
+<span class="sd">    resolutions</span>
+
+<span class="sd">    args:</span>
+<span class="sd">        factor (float): factor to scale the shape and coordinates. For example,</span>
+<span class="sd">            if factor = 2, then the resolution will half and shape doubles.</span>
+
+<span class="sd">    returns:</span>
+<span class="sd">        restee.Domain: domain object with new resolution/coordinates</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">new</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="n">new</span><span class="o">.</span><span class="n">resolution</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">new</span><span class="o">.</span><span class="n">resolution</span> <span class="o">/</span> <span class="n">factor</span><span class="p">)</span>
+    <span class="c1"># interpolate the x coordinates</span>
+    <span class="n">old_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x_size</span><span class="p">)</span> <span class="o">*</span> <span class="n">factor</span>
+    <span class="n">new_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x_size</span> <span class="o">*</span> <span class="n">factor</span><span class="p">)</span>
+    <span class="n">f_x</span> <span class="o">=</span> <span class="n">interpolate</span><span class="o">.</span><span class="n">interp1d</span><span class="p">(</span>
+        <span class="n">old_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_coords</span><span class="p">,</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="s2">&quot;extrapolate&quot;</span>
+    <span class="p">)</span>
+    <span class="n">new</span><span class="o">.</span><span class="n">x_coords</span> <span class="o">=</span> <span class="n">f_x</span><span class="p">(</span><span class="n">new_x</span><span class="p">)</span>
+
+    <span class="n">old_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y_size</span><span class="p">)</span> <span class="o">*</span> <span class="n">factor</span>
+    <span class="n">new_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y_size</span> <span class="o">*</span> <span class="n">factor</span><span class="p">)</span>
+    <span class="n">f_y</span> <span class="o">=</span> <span class="n">interpolate</span><span class="o">.</span><span class="n">interp1d</span><span class="p">(</span>
+        <span class="n">old_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_coords</span><span class="p">,</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="s2">&quot;extrapolate&quot;</span>
+    <span class="p">)</span>
+    <span class="n">new</span><span class="o">.</span><span class="n">y_coords</span> <span class="o">=</span> <span class="n">f_y</span><span class="p">(</span><span class="n">new_x</span><span class="p">)</span>
+
+    <span class="n">new</span><span class="o">.</span><span class="n">x_size</span> <span class="o">=</span> <span class="n">new</span><span class="o">.</span><span class="n">x_coords</span><span class="o">.</span><span class="n">size</span>
+    <span class="n">new</span><span class="o">.</span><span class="n">y_size</span> <span class="o">=</span> <span class="n">new</span><span class="o">.</span><span class="n">y_coords</span><span class="o">.</span><span class="n">size</span>
+
+    <span class="n">new</span><span class="o">.</span><span class="n">_construct_grid</span><span class="p">()</span>
+
+    <span class="n">interp_mask</span> <span class="o">=</span> <span class="n">ndimage</span><span class="o">.</span><span class="n">zoom</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;nearest&quot;</span><span class="p">)</span>
+    <span class="n">new</span><span class="o">.</span><span class="n">mask</span> <span class="o">=</span> <span class="n">interp_mask</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bool</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">new</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 class="doc doc-heading" id="restee.core.Domain.to_ee_bbox">
+<code class="highlight language-python"><span class="n">to_ee_bbox</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Converts the domain bounding box to and ee.Geometry</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ee.Geometry</code></td>
+      <td><p>bounding box of domain</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>restee/core.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">to_ee_bbox</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Converts the domain bounding box to and ee.Geometry</span>
+
+<span class="sd">    returns:</span>
+<span class="sd">        ee.Geometry: bounding box of domain</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 class="doc doc-heading" id="restee.core.EESession">
+        <code>EESession</code>
+
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>EESession class that handles GCP/EE REST API info to make authenticated requests to Google Cloud.
+Users provides credentials that are used to create an authorized session to make HTTP requests</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 class="doc doc-heading" id="restee.core.EESession.__init__">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Initialization function for the EESession class</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>project</code></td>
+        <td><code>str</code></td>
+        <td><p>Google Cloud project name with service account whitelisted to use Earth Engine</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>key</code></td>
+        <td><code>str</code></td>
+        <td><p>path to private key file for your whitelisted service account</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>restee/core.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Initialization function for the EESession class</span>
+
+<span class="sd">    args:</span>
+<span class="sd">        project (str): Google Cloud project name with service account whitelisted to use Earth Engine</span>
+<span class="sd">        key (str): path to private key file for your whitelisted service account</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_PROJECT</span> <span class="o">=</span> <span class="n">project</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_SESSION</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_session</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 class="doc doc-heading" id="restee.core.EESession.send_request">
+<code class="highlight language-python"><span class="n">send_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span></code>
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Method to send authenticated requests to google cloud.
+This is wrapped with a backoff decorator that will try multiple requests
+if the initial ones fail.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>url</code></td>
+        <td><code>str</code></td>
+        <td><p>EE REST API endpoint to send request.
+See https://developers.google.com/earth-engine/reference/rest for more info</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>data</code></td>
+        <td><code>dict</code></td>
+        <td><p>Dictionary object to send in the body of the Request.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>response</code></td>
+      <td><p>Reponse object with information on status and content</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>restee/core.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@backoff</span><span class="o">.</span><span class="n">on_exception</span><span class="p">(</span>
+    <span class="n">backoff</span><span class="o">.</span><span class="n">expo</span><span class="p">,</span>
+    <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span><span class="p">,</span>
+    <span class="n">max_tries</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">max_time</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">giveup</span><span class="o">=</span><span class="n">_fatal_code</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">send_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Method to send authenticated requests to google cloud.</span>
+<span class="sd">    This is wrapped with a backoff decorator that will try multiple requests</span>
+<span class="sd">    if the initial ones fail.</span>
+
+<span class="sd">    args:</span>
+<span class="sd">        url (str): EE REST API endpoint to send request.</span>
+<span class="sd">            See https://developers.google.com/earth-engine/reference/rest for more info</span>
+<span class="sd">        data (dict): Dictionary object to send in the body of the Request.</span>
+
+<span class="sd">    returns:</span>
+<span class="sd">        response: Reponse object with information on status and content</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="usage.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Usage" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Usage
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="images.html" class="md-footer__link md-footer__link--next" aria-label="Next: images module" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              images module
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.76f349be.min.js"></script>
+      
+    
+  </body>
+</html>
