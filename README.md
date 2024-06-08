@@ -1,5 +1,7 @@
 # restee
 
+🚨 This repository is no longer under development or maintined, therefor it is archived. The [google/Xee](https://github.com/google/Xee) repository serves a similar purpose and is actively maintained, please use that package instead. 🚨
+
 Python package to call process EE objects via the REST API to local data
 
 [![PyPI version](https://badge.fury.io/py/restee.svg)](https://badge.fury.io/py/restee)
